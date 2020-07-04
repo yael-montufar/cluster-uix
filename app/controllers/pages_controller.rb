@@ -5,4 +5,7 @@ class PagesController < ApplicationController
 
   def kitchen_sink
   end
+
+  def wandergraff
+  end
 end
