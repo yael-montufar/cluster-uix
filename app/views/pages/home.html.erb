@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="text-center">Projects</h1>
+<div class="container">
+  <% @pages.each do |page| %>
+  <h2><%= page.title %></h2>
+  <% end %>
+</div>
+
