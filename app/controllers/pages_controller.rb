@@ -4,6 +4,10 @@ class PagesController < ApplicationController
     @pages = Page.all
   end
 
+  def show
+    @page = Page.find(params[:id])
+  end
+
   def kitchen_sink
   end
 end
