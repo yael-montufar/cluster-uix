@@ -1,7 +1,7 @@
 <h1 class="text-center">Projects</h1>
+<p class="text-center"><%= link_to new_page_path, class: "text-decoration-none" do %><i class="fas fa-plus" target="_blank"></i><% end %></p>
 <div class="container">
   <% @pages.each do |page| %>
   <h2><%= link_to page.title, page_path(page), class: "text-decoration-none" %></h2>
   <% end %>
 </div>
-
