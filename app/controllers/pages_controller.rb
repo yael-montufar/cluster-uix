@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by!(slug: params[:slug])
   end
 
   def new
@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     if @page.save
       redirect_to root_path
     else
-    render :new
+      render :new
     end
   end
 
@@ -29,5 +29,4 @@ class PagesController < ApplicationController
   def page_params
     params.require(:page).permit(:title)
   end
-
 end
