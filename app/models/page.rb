@@ -1,6 +1,6 @@
 class Page < ApplicationRecord
   before_validation :title_format
-  after_validation :set_slug, :to_param, only: [:show]
+  after_validation :set_slug, :to_param
 
   validates :title, presence: true, uniqueness: { case_sensitive: false }
 

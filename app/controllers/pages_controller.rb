@@ -21,6 +21,19 @@ class PagesController < ApplicationController
     end
   end
 
+  def edit
+    @page = Page.find_by!(slug: params[:slug])
+  end
+
+  def update
+    @page = Page.find_by!(slug: params[:slug])
+    if @page.update(page_params)
+      redirect_to page_path(@page)
+    else
+      render :edit
+    end
+  end
+
   def kitchen_sink
   end
 
