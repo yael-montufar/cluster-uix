@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update]
+  before_action :set_page, only: [:show, :edit, :update, :destroy]
 
   def home
     @homepage = true
@@ -31,6 +31,11 @@ class PagesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @page.destroy
+    redirect_to root_path
   end
 
   def kitchen_sink
