@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # resources :pages, only: [:show, :new, :create]
 
   # SLUG
-  resources :pages, param: :slug, only: [:show, :new, :create, :edit, :update]
+  resources :pages, param: :slug, except: [:index]
 end
