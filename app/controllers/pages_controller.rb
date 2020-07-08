@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
+  before_action :set_page, only: [:show, :edit, :update]
+
   def home
     @homepage = true
     @pages = Page.all
   end
 
   def show
-    @page = Page.find_by!(slug: params[:slug])
   end
 
   def new
@@ -22,11 +23,9 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find_by!(slug: params[:slug])
   end
 
   def update
-    @page = Page.find_by!(slug: params[:slug])
     if @page.update(page_params)
       redirect_to page_path(@page)
     else
@@ -38,6 +37,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def set_page
+    @page = Page.find_by!(slug: params[:slug])
+  end
 
   def page_params
     params.require(:page).permit(:title)
