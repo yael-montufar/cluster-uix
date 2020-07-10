@@ -1,0 +1,83 @@
+#center-svg {
+  width: 30vh;
+  max-height: calc(100vh-width);
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+// ========== VIVUS ==========
+.left-stroke {
+  stroke-dasharray:903 905;
+  stroke-dashoffset:904;
+}
+.start .left-stroke {
+  animation:stroke_draw 3600ms ease-in-out 0ms infinite,
+            stroke_fade 3600ms linear 0ms infinite;
+}
+.mid-stroke {
+  stroke-dasharray:2556 2558;
+  stroke-dashoffset:2557;
+}
+.start .mid-stroke {
+  animation:xwGebVaZ_draw_1 3600ms ease-in-out 0ms infinite,
+            stroke_fade 3600ms linear 0ms infinite;
+}
+.right-stroke {
+  stroke-dasharray:903 905;stroke-dashoffset:904;
+}
+.start .right-stroke {
+  animation:xwGebVaZ_draw_2 3600ms ease-in-out 0ms infinite,
+            stroke_fade 3600ms linear 0ms infinite;
+}
+
+@keyframes xwGebVaZ_draw {
+  100% {
+    stroke-dashoffset:0;
+  }
+}
+@keyframes stroke_fade {
+  0% {
+    stroke-opacity:1;
+  }
+  94.44444444444444% {
+    stroke-opacity:1;
+  }
+  100% {
+    stroke-opacity:0;
+  }
+}
+@keyframes stroke_draw {
+  11.11111111111111% {
+    stroke-dashoffset: 904;
+  }
+  52.77777777777778% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 1);
+  }
+}
+@keyframes xwGebVaZ_draw_1 {
+  11.11111111111111% {
+    stroke-dashoffset: 2557;
+  }
+  52.77777777777778% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 1);
+  }
+}
+@keyframes xwGebVaZ_draw_2 {
+  11.11111111111111% {
+    stroke-dashoffset: 904;
+  }
+  52.77777777777778% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 0);
+  }
+  100% {
+    stroke-dashoffset: 0; fill: rgba(255, 255, 255, 1);
+  }
+}
