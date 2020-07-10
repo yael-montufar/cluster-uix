@@ -41,6 +41,10 @@ class PagesController < ApplicationController
   def kitchen_sink
   end
 
+  def test
+    @testpage = true
+  end
+
   private
 
   def set_page
