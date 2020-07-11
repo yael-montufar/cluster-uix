@@ -11,16 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body class="<%= @homepage ? 'homepage' : '' %>
-               <%= @testpage ? 'testpage' : '' %>"
-               >
-
-    <% if action_name == 'home' %>
-      <div class="preload">
-        <%= render 'partials/ym_svg' %>
-      </div>
-    <% end %>
-
+  <body class="<%= @class_list.include?(action_name) ? action_name + 'page' : '' %>">
     <%= yield %>
   </body>
 </html>
